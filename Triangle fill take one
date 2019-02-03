@@ -1,0 +1,30 @@
+#this will be in python. I am currently trying to create a fractal triangle with the Turtle class for a project in the Udacity 
+#Programming Foundations class. So far I've found out how to draw a triangle and fill it. 
+#Next step is to find the midpoint of each triangle and draw another triangle with another turtle. This is the part that's tripping me up
+
+#Current code:
+
+import turtle
+
+def draw_triangle(some_turtle):
+    some_turtle.fillcolor("green")
+    some_turtle.begin_fill()
+    for i in range(1,4):
+        some_turtle.forward(200)
+        some_turtle.left(120)
+    some_turtle.end_fill()
+
+def draw_fractal():
+    window = turtle.Screen()
+    window.bgcolor("black")
+
+    anthony = turtle.Turtle()
+    anthony.shape("turtle")
+    anthony.color("green")
+    anthony.speed(2)
+
+    draw_triangle(anthony)
+
+    window.exitonclick()
+
+draw_fractal()
