@@ -10,17 +10,20 @@ def draw_initial_triangle(some_turtle):
     #going to take out the fill so I can see lines
     #some_turtle.fillcolor("green")
     #some_turtle.begin_fill()
-    begin_poly()
+    some_turtle.begin_poly()
     for i in range(1,4):
         some_turtle.forward(200)
         some_turtle.left(120)
     #some_turtle.end_fill()
-    end_poly()
+    some_turtle.end_poly()
+    p = some_turtle.get_poly()
 
 #midpoint formula; this is the portion where I'm stuck on. In english, I know I need to recall the vertices of the triangle and 
 #somehow put them in the midpoint formula. I feel like I might be overthinking
-def midpoint():
 
+def midpoint():
+    print (p)
+    
 
 def draw_fractal():
     window = turtle.Screen()
@@ -32,6 +35,7 @@ def draw_fractal():
     anthony.speed(2)
 
     draw_initial_triangle(anthony)
+    
 
     window.exitonclick()
 
